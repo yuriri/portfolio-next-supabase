@@ -11,6 +11,20 @@ type PageProps = {
   }>;
 };
 
+export async function generateMetadata({ params }: PageProps) {
+  const gotParams = await params;
+  const data = await getEachDataFromSupabase<workType>("works", gotParams.workSlug);
+
+  if (!data) {
+    notFound();
+  }
+
+  return {
+    title: `${data.title} | Works | Sakai Portfolio site.`,
+    description: `${data.title}の詳細ページです。`,
+  };
+}
+
 async function WorkData({ params }: PageProps) {
   const { workSlug } = await params;
   // workSlug取得前にdataを取得しようとするとエラーになるので、workSlugを取得してからdataを取得したい
