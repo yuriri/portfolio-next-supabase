@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { jobType } from "@/types/job.types";
+import { jobTypeAll } from "@/types/job.types";
 
-export default function JobItem({ name, slug }:jobType) {
+export default function JobItem({ name, slug }: jobTypeAll) {
   return (
     <article className="">
       <header>
