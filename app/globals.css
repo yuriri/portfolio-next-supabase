@@ -95,6 +95,28 @@ main {
   }
 }
 
+.title-03 {
+  font-size: 1.4rem;
+  margin-bottom: .8rem;
+}
+
+@media (min-width: 768px) {
+  .title-03 {
+    font-size: 1.8rem;
+  }
+}
+
+.title-04 {
+  font-size: 1.2rem;
+  margin-bottom: .4rem;
+}
+
+@media (min-width: 768px) {
+  .title-04 {
+    font-size: 1.4rem;
+  }
+}
+
 .section-01+.section-01 {
   margin-top: 4rem;
 }
