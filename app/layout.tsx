@@ -15,18 +15,11 @@ export const metadata: Metadata = {
   description: "My Job History and Works.",
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  display: "swap",
-  subsets: ["latin"],
-});
-
 const NotoSans = Noto_Sans_JP({
   variable: "--font-noto-sans",
   display: "swap",
   subsets: ["latin"],
 });
-
 
 export default function RootLayout({
   children,
