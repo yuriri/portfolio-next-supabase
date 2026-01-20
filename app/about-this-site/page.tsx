@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { HeadingLv02 } from "@/components/headings";
 
 export const metadata: Metadata = {
   title: "About This Page | Sakai Portfolio site.",
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 
 const AboutThisSitePage = () => {
   return <main>
-    <h2 className="title-02">このサイトについて</h2>
+    <HeadingLv02 color="green-600">このサイトについて</HeadingLv02>
     <h3 className="title-03"><span className="bg-green-600 text-white px-4">機能要件</span></h3>
     <h4 className="title-04"><span className="border-b-green-600 border-b-2">言語</span></h4>
     <p>TypeScript</p>

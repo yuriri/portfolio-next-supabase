@@ -4,6 +4,7 @@ import { workType } from "@/types/job.types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { formattedDate } from "@/lib/formatDate";
+import { HeadingLv02 } from "@/components/headings";
 
 type PageProps = {
   params: Promise<{
@@ -39,11 +40,11 @@ async function WorkData({ params }: PageProps) {
   return (
     <main>
       <section className="section-child-01">
-        <h2 className="title-02">{data.title}</h2>
+        <HeadingLv02 color="blue-700">{data.title}</HeadingLv02>
         <p className="text-right hover:text-blue-700 hover:underline"><a href={data.url || ""} target="_blank">{data.url}</a></p>
         <Image src={`/images/screenshots/${data.slug}.webp`} alt={data.title} width={1000} height={1000} loading="eager" className="border-blue-700 border-2 mx-auto mt-6" />
-        <p className="mt-8 w-4/5 mx-auto">{data.description}</p>
-        <dl className="mt-8 flex flex-col gap-2 w-4/5 mx-auto">
+        <p className="mt-8 md:w-4/5 mx-auto">{data.description}</p>
+        <dl className="mt-8 flex flex-col gap-2 md:w-4/5 mx-auto">
           <dt className="inline bg-blue-700 px-2 py-1 text-white">担当</dt>
           <dd>{data.role}</dd>
           <dt className="inline bg-blue-700 px-2 py-1 text-white">スキル</dt>

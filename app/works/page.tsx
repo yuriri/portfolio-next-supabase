@@ -3,6 +3,7 @@ import WorksGrid from "@/components/works/works-grid";
 import {getDataFromSupabase} from "@/lib/getData";
 import { workType } from "@/types/job.types";
 import { Metadata } from "next";
+import { HeadingLv02 } from "@/components/headings";
 
 export const metadata: Metadata = {
   title: "Works | Sakai Portfolio site.",
@@ -19,7 +20,7 @@ export default function WorksPage() {
   return (
     <main>
       <section>
-        <h2 className="title-02">Works</h2>
+        <HeadingLv02 color="blue-700">Works</HeadingLv02>
         <Suspense fallback={<div>Loading...</div>}>
           <WorksData />
         </Suspense>
