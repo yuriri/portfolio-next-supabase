@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import WorksGrid from "@/components/works/works-grid";
-import getDataFromSupabase from "@/lib/getData";
+import {getDataFromSupabase} from "@/lib/getData";
 import { workType } from "@/types/job.types";
 
 async function WorksData() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import SectionBlock from "@/components/ui/sections";
 import SkillsContent from "@/components/skills/skills-content";
-import getDataFromSupabase from "@/lib/getData";
+import {getDataFromSupabase} from "@/lib/getData";
 import WorksGrid from "@/components/works/works-grid";
 import { workType } from "@/types/job.types";
 
