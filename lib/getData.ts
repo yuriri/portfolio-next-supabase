@@ -1,11 +1,11 @@
 // Supabaseからデータを取得
 import { createClient } from "@/lib/supabase/server";
-import { jobType, workType } from "@/types/job.types";
+import { jobTypeAll, workType } from "@/types/job.types";
 
-export default async function getDataFromSupabase (slug: string) {
-	const supabase = await createClient();
+export default async function getDataFromSupabase<T = jobTypeAll | workType>(slug: string): Promise<T[]> {
+  const supabase = await createClient();
   const { data } = await supabase.from(slug).select();
-	return data;
+  return (data || []) as T[];
 }
 
 // export default getDataFromSupabase;

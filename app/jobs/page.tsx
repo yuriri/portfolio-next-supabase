@@ -1,11 +1,12 @@
 import { Suspense } from "react";
 import JobsGrid from "@/components/jobs/jobs-grid";
-import getDataFromSupabase  from "@/lib/getData";
+import getDataFromSupabase from "@/lib/getData";
+import { jobTypeAll } from "@/types/job.types";
 
 async function JobsData() {
-  const jobs = await getDataFromSupabase("jobs");
+  const jobs = await getDataFromSupabase<jobTypeAll>("jobs");
 
-  return <JobsGrid jobs={jobs}>{JSON.stringify(jobs, null, 2)}</JobsGrid>;
+  return <JobsGrid jobs={jobs} />;
 }
 
 export default function Jobs() {

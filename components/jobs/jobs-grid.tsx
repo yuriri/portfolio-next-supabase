@@ -1,7 +1,7 @@
 import JobItem from "./job-item";
-import { jobType } from "@/types/job.types";
+import { jobTypeAll } from "@/types/job.types";
 
-export default function JobsGrid({jobs}:{jobs:jobType[]}) {
+export default function JobsGrid({jobs}:{jobs:jobTypeAll[]}) {
     return (
     <ul className="">
       {jobs.map((job) => (
