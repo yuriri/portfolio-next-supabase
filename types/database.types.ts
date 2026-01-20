@@ -47,13 +47,39 @@ export type Database = {
         }
         Relationships: []
       }
+      skills: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: number
+          name: string
+          score: number
+          type: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: number
+          name: string
+          score: number
+          type: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: number
+          name?: string
+          score?: number
+          type?: string
+        }
+        Relationships: []
+      }
       works: {
         Row: {
           created_at: string
           description: string | null
           id: number
           role: string | null
-          screenshot: string | null
           skills: string[] | null
           slug: string
           title: string
@@ -64,7 +90,6 @@ export type Database = {
           description?: string | null
           id?: number
           role?: string | null
-          screenshot?: string | null
           skills?: string[] | null
           slug: string
           title: string
@@ -75,7 +100,6 @@ export type Database = {
           description?: string | null
           id?: number
           role?: string | null
-          screenshot?: string | null
           skills?: string[] | null
           slug?: string
           title?: string
