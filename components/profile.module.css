@@ -8,10 +8,8 @@
   }
 }
 
-.gitHubLink {
-  :hover {
-    .gitHubLogo path {
-      fill: rgb(236, 72, 153);
-    }
+.gitHubLink:hover {
+  .gitHubLogo path {
+    fill: rgb(236, 72, 153);
   }
 }

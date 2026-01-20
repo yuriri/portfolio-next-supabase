@@ -1,6 +1,4 @@
-import Image from "next/image"
 import Link from "next/link";
-import gitHubLogo from "@/assets/images/logos/github.svg";
 import classes from "./profile.module.css";
 
 export default function Profile() {
