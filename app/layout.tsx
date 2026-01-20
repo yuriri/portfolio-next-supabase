@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Noto_Sans_JP } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
@@ -21,6 +21,12 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const NotoSans = Noto_Sans_JP({
+  variable: "--font-noto-sans",
+  display: "swap",
+  subsets: ["latin"],
+});
+
 
 export default function RootLayout({
   children,
@@ -29,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${NotoSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

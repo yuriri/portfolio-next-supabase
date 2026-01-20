@@ -1,0 +1,17 @@
+.gitHubLogo {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  margin-left: 8px;
+  path {
+    fill: hsl(var(--foreground));
+  }
+}
+
+.gitHubLink {
+  :hover {
+    .gitHubLogo path {
+      fill: rgb(236, 72, 153);
+    }
+  }
+}
