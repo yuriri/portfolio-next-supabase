@@ -30,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -62,7 +63,36 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+main {
+  padding: 0 10px;
+  max-width: calc(100% - 24px);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: calc(100% - 72px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.title-02 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.section-01 + .section-01 {
+  margin-top: 4rem;
+}
+
+.section-child-01 {
+  padding-top: 4rem;
 }

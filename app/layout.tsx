@@ -21,6 +21,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,7 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
           >
-            <Header />
+          <Header />
           {children}
           <Footer />
         </ThemeProvider>

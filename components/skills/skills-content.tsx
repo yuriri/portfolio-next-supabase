@@ -41,20 +41,23 @@ async function SkillsDataLanguage() {
   const allSkillsData = await Promise.all(skillsDataPromises);
 
   return (
-    <div>
-      {allSkillsData.map((skillData) => (
-        <div key={skillData.type}>
-          <h3>{skillData.title}</h3>
-          <ul>
-            {skillData.skills.map((skill) => (
-              <li key={skill.id}>
-                {skill.name} - スコア: {skill.score}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+    <>
+      <p className="text-center mb-4">各スキルの習熟度 (5点中)</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-3 md:gap-y-8">
+        {allSkillsData.map((skillData) => (
+          <section key={skillData.type} className="flex flex-col gap-2">
+            <h3 className="text-xl"><span className="bg-orange-700 text-white px-2">{skillData.title}</span></h3>
+            <ul className="flex flex-col gap-y-2">
+              {skillData.skills.map((skill) => (
+                <li key={skill.id}>
+                  {skill.name}...<span className="text-lg text-orange-700 font-bold">{skill.score}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </>
   );
 }
 

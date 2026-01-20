@@ -1,0 +1,12 @@
+.thumbnailArea {
+  width: 80%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.thumbnailArea img {
+  object-fit: contain;
+}

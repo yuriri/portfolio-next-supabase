@@ -1,0 +1,15 @@
+.heroSection {
+  background: linear-gradient(#1ceef7 0, #f854c6 100%);
+}
+
+.heroTitle01 {
+  font-family: "Averia Sans Libre", Helvetica, sans-serif;
+  font-size: 42px;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .heroTitle01 {
+    font-size: 120px;
+  }
+}

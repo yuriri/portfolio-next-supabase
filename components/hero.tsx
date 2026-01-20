@@ -1,9 +1,19 @@
+import classes from "./hero.module.css";
+import { Averia_Sans_Libre } from "next/font/google";
+
+const averiaSans = Averia_Sans_Libre({
+  weight: "400",
+  variable: "--font-averia-sans",
+  display: "swap",
+  subsets: ["latin"],
+});
+
 export function Hero() {
   return (
-    <div className="flex flex-col gap-16 items-center">
-      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        Sakai Portfolio
-      </p>
-    </div>
+    <section className={`flex h-[400px] justify-center items-center mb-16 ${classes.heroSection}`}>
+      <h2 className={`${classes.heroTitle01} ${averiaSans.className} wrap-break-word`}>
+        Sakai Web Portfolio
+      </h2>
+    </section>
   );
 }

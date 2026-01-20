@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import JobsGrid from "@/components/jobs/jobs-grid";
-import {getDataFromSupabase} from "@/lib/getData";
+import { getDataFromSupabase } from "@/lib/getData";
 import { jobTypeAll } from "@/types/job.types";
 import { Metadata } from "next";
 
@@ -17,8 +17,13 @@ async function JobsData() {
 
 export default function Jobs() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <JobsData />
-    </Suspense>
+    <main>
+      <section>
+        <h2 className="title-02">Job History</h2>
+        <Suspense fallback={<div>Loading...</div>}>
+          <JobsData />
+        </Suspense>
+      </section>
+    </main>
   );
 }
