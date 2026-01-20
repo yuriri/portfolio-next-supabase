@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import logoImg from "@/assets/images/logo_white.png";
+import NavLink from "@/components/nav-link";
 
 import classes from "./header.module.css";
 
@@ -12,9 +13,9 @@ export function Header() {
           <Image src={logoImg} alt="Sakai Portfolio" width={30} height={30} />Sakai Portfolio
         </Link>
       </h1>
-      <nav className="flex gap-2 items-center">
-        <Link className="hover:text-blue-700 hover:underline" href="/works">works</Link>
-        <Link className="hover:text-blue-700 hover:underline" href="/jobs">jobs</Link>
+      <nav className="flex gap-4 items-center">
+        <NavLink href="/works" className="hover:text-blue-700 hover:underline">Works</NavLink>
+        <NavLink href="/jobs" className="hover:text-blue-700 hover:underline">Jobs</NavLink>
       </nav>
     </header>
   )
