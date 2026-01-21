@@ -7,7 +7,7 @@ import classes from "./header.module.css";
 
 export function Header() {
   return (
-    <header className={`flex justify-between md:justify-around items-center gap-8 py-2 px-2 md:px-0 w-full ${classes.header}`}>
+    <header className={`sticky backdrop-blur-sm top-0 h-auto flex justify-between  items-center gap-8 py-2 px-2 md:px-0 ${classes.header}`}>
       <h1>
         <Link href="/" className="flex justify-center items-center gap-5 hover:text-blue-700">
           <Image src={logoImg} alt="Sakai Portfolio" width={30} height={30} />Sakai Portfolio
