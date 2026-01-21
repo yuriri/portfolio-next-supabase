@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import logoImg from "@/assets/images/logo_white.png";
-import NavLink from "@/components/nav-link";
 
 import classes from "./header.module.css";
 
@@ -14,8 +13,8 @@ export function Header() {
         </Link>
       </h1>
       <nav className="flex gap-4 items-center">
-        <NavLink href="/works" className="hover:text-blue-700 hover:underline">Works</NavLink>
-        <NavLink href="/jobs" className="hover:text-blue-700 hover:underline">Jobs</NavLink>
+        <Link href="/works" className="hover:text-blue-700 hover:underline">Works</Link>
+        <Link href="/jobs" className="hover:text-blue-700 hover:underline">Jobs</Link>
       </nav>
     </header>
   )
