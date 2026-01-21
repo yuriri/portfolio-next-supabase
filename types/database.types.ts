@@ -18,32 +18,35 @@ export type Database = {
         Row: {
           created_at: string
           description: string | null
-          "end-date": string | null
+          end_date: string | null
           id: number
+          job_type: string | null
           name: string
           skills: string[] | null
           slug: string
-          "start-date": string | null
+          start_date: string | null
         }
         Insert: {
           created_at?: string
           description?: string | null
-          "end-date"?: string | null
+          end_date?: string | null
           id?: number
+          job_type?: string | null
           name: string
           skills?: string[] | null
           slug: string
-          "start-date"?: string | null
+          start_date?: string | null
         }
         Update: {
           created_at?: string
           description?: string | null
-          "end-date"?: string | null
+          end_date?: string | null
           id?: number
+          job_type?: string | null
           name?: string
           skills?: string[] | null
           slug?: string
-          "start-date"?: string | null
+          start_date?: string | null
         }
         Relationships: []
       }
