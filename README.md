@@ -1,5 +1,6 @@
 # このサイトについて
 
+これまでの仕事の成果やスキルをまとめたポートフォリオサイトです。
 <a href="https://portfolio-next-supabase.vercel.app/about-this-site">詳細</a>
 
 ## 機能要件
