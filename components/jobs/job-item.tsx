@@ -1,6 +1,6 @@
 import { jobTypeAll } from "@/types/job.types";
 
-export default function JobItem({ name, slug, description, start_date, end_date, skills, job_type }: jobTypeAll) {
+export default function JobItem({ name, description, start_date, end_date, skills, job_type }: jobTypeAll) {
   return (
     <>
     <h3 className="title-03"><span className="bg-blue-700 text-white px-4">{name}</span></h3>
