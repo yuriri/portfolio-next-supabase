@@ -59,7 +59,7 @@ async function WorkData({ params }: PageProps) {
 
 export default async function WorkPage({ params }: PageProps) {
   return (
-    <Suspense fallback={<p>loading...</p>}>
+    <Suspense fallback={<Loading />}>
       <WorkData params={params} />
     </Suspense>
   );

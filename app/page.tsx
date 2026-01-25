@@ -8,6 +8,7 @@ import SectionBlock from "@/components/ui/sections";
 import SkillsContent from "@/components/skills/skills-content";
 import WorksGrid from "@/components/works/works-grid";
 import Profile from "@/components/profile";
+import Loading from "./loading";
 
 async function WorksData() {
   const works = await getDataFromSupabase<workType>("works", 3);
@@ -24,7 +25,7 @@ export default function Home() {
           <Profile />
         </SectionBlock>
         <SectionBlock title="Works" color="blue">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loading />}>
             <WorksData />
           </Suspense>
           <Link href="works" className="w-[240px] py-2 mx-auto mt-6 border-white border-2 text-white bg-blue-700 hover:border-blue-700 hover:bg-white hover:text-blue-700 text-center flex justify-center items-center">もっと見る</Link>

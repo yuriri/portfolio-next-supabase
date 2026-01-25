@@ -4,6 +4,7 @@ import { getDataFromSupabase } from "@/lib/getData";
 import { jobTypeAll } from "@/types/job.types";
 import { Metadata } from "next";
 import { HeadingLv02 } from "@/components/headings";
+import Loading from "../loading";
 
 export const metadata: Metadata = {
   title: "Jobs | Sakai Portfolio site.",
@@ -21,7 +22,7 @@ export default function Jobs() {
     <main>
       <section>
         <HeadingLv02 color="blue-700">Job History</HeadingLv02>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <JobsData />
         </Suspense>
       </section>

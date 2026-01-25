@@ -1,6 +1,7 @@
 import { getSkillsDataFromSupabase } from "@/lib/getData";
 import { skillType } from "@/types/job.types";
 import { Suspense } from "react";
+import Loading from "@/app/loading";
 
 const typeValues = ["language", "framework", "dev", "cms", "taskRunner", "editor", "design", "communication"];
 
@@ -63,7 +64,7 @@ async function SkillsDataLanguage() {
 
 
 const SkillsContent = async () => {
-  return <Suspense fallback={<p>Loading...</p>}>
+  return <Suspense fallback={<Loading />}>
     <SkillsDataLanguage />
   </Suspense>
 }
