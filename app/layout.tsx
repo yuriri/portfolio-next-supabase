@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Sakai Portfolio site.",
   description: "My Job History and Works.",
+  robots: {
+  index: false, // noindexの設定
+  googleBot: {
+      index: false, // Google のクローラーをブロック
+    },
+  },
 };
 
 const NotoSans = Noto_Sans_JP({
