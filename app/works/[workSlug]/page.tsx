@@ -5,6 +5,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { formattedDate } from "@/lib/formatDate";
 import { HeadingLv02 } from "@/components/headings";
+import Loading from "@/app/loading";
 
 type PageProps = {
   params: Promise<{
