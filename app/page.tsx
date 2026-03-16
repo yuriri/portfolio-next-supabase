@@ -21,16 +21,16 @@ export default function Home() {
     <>
       <Hero />
       <main>
-        <SectionBlock title="Profile" color="pink">
+        <SectionBlock title="Profile" color="pink" className="js-scrollAnimation">
           <Profile />
         </SectionBlock>
-        <SectionBlock title="Works" color="blue">
+        <SectionBlock title="Works" color="blue" className="js-scrollAnimation">
           <Suspense fallback={<Loading />}>
             <WorksData />
           </Suspense>
           <Link href="works" className="w-[240px] py-2 mx-auto mt-6 border-white border-2 text-white bg-blue-700 hover:border-blue-700 hover:bg-white hover:text-blue-700 text-center flex justify-center items-center">もっと見る</Link>
         </SectionBlock>
-        <SectionBlock title="Skills" color="orange">
+        <SectionBlock title="Skills" color="orange" className="js-scrollAnimation">
           <SkillsContent />
         </SectionBlock>
       </main>

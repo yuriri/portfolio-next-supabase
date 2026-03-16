@@ -116,11 +116,3 @@ main {
     font-size: 1.4rem;
   }
 }
-
-.section-01+.section-01 {
-  margin-top: 4rem;
-}
-
-.section-child-01 {
-  padding-top: 4rem;
-}
