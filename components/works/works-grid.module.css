@@ -1,0 +1,15 @@
+/* works-list-itemクラスに対して、sibling-index()を使用して、リストアイテムの順番に応じた回転と遅延を設定 */
+.works-list-item {
+  transform: rotate(0deg);
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: calc((sibling-index() - 1) * 0.1s);
+}
+
+@starting-style {
+  .works-list-item {
+    --rotate-deg: calc((sibling-index() - 1) * 2deg);
+    opacity: 0;
+    transform: rotate(var(--rotate-deg));
+  }
+
+}

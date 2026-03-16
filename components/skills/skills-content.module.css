@@ -1,0 +1,22 @@
+.skillSection {
+  transition: opacity 0.3s;
+  transition-delay: calc((sibling-index() - 1) * 1s);
+}
+
+.skillItem {
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: calc((sibling-index() - 1) * 0.05s);
+}
+
+@starting-style {
+  .skillSection {
+    opacity: 0;
+  }
+
+  .skillItem {
+    --transform-x-value: calc((sibling-index() - 1) * 2%);
+    opacity: 0;
+    transform: translateX(var(--transform-x-value));
+  }
+}
