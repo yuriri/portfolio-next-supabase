@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Noto_Sans_JP } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 import Footer from "@/components/footer";
 import "./globals.css";
-
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -14,8 +13,8 @@ export const metadata: Metadata = {
   title: "Sakai Portfolio site.",
   description: "My Job History and Works.",
   robots: {
-  index: false, // noindexの設定
-  googleBot: {
+    index: false, // noindexの設定
+    googleBot: {
       index: false, // Google のクローラーをブロック
     },
   },
@@ -40,7 +39,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-          >
+        >
           <Header />
           {children}
           <Footer />
